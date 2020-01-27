@@ -1,6 +1,8 @@
 FROM php:7.4.2-fpm-alpine3.11
 
-RUN apk add bash mysql-client shadow
+RUN apk add bash
+RUN apk add mysql-client
+RUN apk add shadow
 RUN docker-php-ext-install pdo pdo_mysql
 
 RUN apk add --no-cache openssl
